@@ -22,3 +22,5 @@ Dados pessoais
 - Orientação a objetos
 - Boas práticas
 - Linguagem Javasript
+
+Created with ❤ by Felipe
