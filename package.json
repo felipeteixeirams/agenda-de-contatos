@@ -1,0 +1,26 @@
+{
+  "name": "agenda-de-contatos",
+  "version": "1.0.0",
+  "description": "> Descrição: sistema para agenda de meus contatos.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js localhost 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipeteixeirams/Agenda-de-Contatos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felipeteixeirams/Agenda-de-Contatos/issues"
+  },
+  "homepage": "https://github.com/felipeteixeirams/Agenda-de-Contatos#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3",
+    "nodemon": "^2.0.22"
+  }
+}
