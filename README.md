@@ -3,20 +3,21 @@
 
 > Dados coletados
 
-Endereço Completo
- - Logradouro;
- - Número;
- - Cep;
- - Bairro;
- - Cidade;
- - Estado;
- 
 Dados pessoais
  - Nome completo;
- - E-mail;
- - Números de documentos de identificação;
+ - CPF;
  - Data de nascimento;
+
+Contato
+ - E-mail;
  - Telefone(s);
+
+Endereço Completo
+ - Cep;
+ - Logradouro;
+ - Número;
+ - Cidade;
+ - Estado;
 
 # Requisitos:
 - Orientação a objetos
