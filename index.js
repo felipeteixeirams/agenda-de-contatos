@@ -1,7 +1,8 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
-const hostname = '127.0.0.1', port = 3000;
+const Person = require('./models/Person')
+require('dotenv').config()
 
 /**
  * Ler JSON
@@ -21,28 +22,31 @@ const personRoutes = require('./routes/personRoutes')
 
 app.use('/person', personRoutes)
 
-
 /**
  * Rota inicial
- */
-app.get ('/', function(req, res) {
-    res.json({ message: 'Olá pessoar!'})
-});
+*/
+app.get('/', async(req, res) => {
 
+    try{
+        const peaple = await Person.find()
+
+        res.status(200).json(peaple)
+    }catch(error){
+        res.status(500).json({ error: error })
+    }
+})
 
 /**
  * Entregar uma porta
  */
 
-const BD_PASSWORD = 'zPqgZBhqYrGjubSm';
-const BD_USER = 'felipeteixeira';
-
 mongoose
-    .connect(`mongodb+srv://${BD_USER}:${BD_PASSWORD}@clusterapi.uwe76.mongodb.net/?retryWrites=true&w=majority`
+    .connect(`mongodb+srv://${process.env.BD_USER}:${process.env.BD_PASSWORD}@clusterapi.uwe76.mongodb.net/?retryWrites=true&w=majority`
     )
     .then(
-        app.listen(port, hostname, ()=> {
+        app.listen(process.env.BD_PORT, process.env.BD_HOST, ()=> {
             console.log(`Connected at MongoDB!`)
+            console.log(`Access: http://${process.env.BD_HOST}:${process.env.BD_PORT}`)
         })
     )
     .catch((error)=> console.log(error))
