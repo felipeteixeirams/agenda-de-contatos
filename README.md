@@ -1,7 +1,5 @@
 # AGENDA DE CONTATOS
-> Descrição: sistema para agenda de meus contatos.
-
-> Dados coletados
+> Descrição: API simples, sistema para agenda de contatos, contendo:
 
 Dados pessoais
  - Nome completo;
@@ -19,9 +17,10 @@ Endereço Completo
  - Cidade;
  - Estado;
 
-# Requisitos:
+# Tecnologias e conteitos utilizados:
 - Orientação a objetos
 - Boas práticas
 - Linguagem Javasript
+- NodeJS e Express
 
 Created with ❤ by Felipe
