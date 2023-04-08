@@ -1,7 +1,7 @@
 # AGENDA DE CONTATOS
 > Descrição: API simples, para gravar, atualizar, recuperar e excluir contatos de agenda, contendo:
 
-<img src="./preview.jpg" width="300px"/>
+<img src="./preview.jpg" width="500px"/>
 
 Dados pessoais
  - Nome;
