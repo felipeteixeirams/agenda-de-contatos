@@ -10,11 +10,12 @@ Dados pessoais
  - Telefone(s);
  
 #INSTRUÇÕES
-- Após clonar o projeto localmente, execute o comando <code>npm install</code> para receber todas as dependencias do projeto.
-- Crie uma conta no <a href="https://www.mongodb.com/atlas" target="_blank">MongoDB Atlas</a>, onde será manipulado os dados.
-- No MongoDB Atlas, crie um novo projeto e um banco de dados a ele, então clique em <em>Connect</em> para criar um a string de conexão nova.
-- Copie a string de conexão ao projeto e configure o usuário e senha ao arquivo ".env" que irá gerenciar as váriaveis de ambiente.
-- Tudo pronto!
+- Está API está pronta para ser reutilizada! Portanto, será necessário ter uma conta no <a href="https://www.mongodb.com/atlas" target="_blank">MongoDB Atlas</a>, onde será manipulado os dados.
+- Clone o repositório e execute o comando "npm install" para receber as dependencias.
+- Crie o arquivo ".env" na raiz do projeto e configure as variáveis "BD_USER=?? , BD_PASSWORD=??
+BD_HOST=localhost, BD_PORT=3000".
+- Tudo pronto, execute o comando "npm start".
+Observação: a API envia e recebe Json, se sentir-se confortável recomendo <a href="https://www.postman.com/">Postman</a>.
 
 # TECNOLOGIAS E CONCEITOS UTILIZADOS:
 - Javasript

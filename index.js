@@ -28,9 +28,9 @@ app.use('/person', personRoutes)
 app.get('/', async(req, res) => {
 
     try{
-        const peaple = await Person.find()
 
-        res.status(200).json(peaple)
+        res.json([{"Olá":"Bem Vindo a API Agenda. Utilize a rota /person para recuperar os contatos, para alterar e excluir utilize /person/id  , a API envia e recebe Json =)."}])
+
     }catch(error){
         res.status(500).json({ error: error })
     }
