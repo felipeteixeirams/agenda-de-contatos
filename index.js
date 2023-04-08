@@ -1,8 +1,14 @@
+const path = require('path')
 const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
 const Person = require('./models/Person')
 require('dotenv').config()
+
+const viewsPath = path.join(__dirname, './public')
+
+app.set('views', viewsPath)
+app.use(express.static(viewsPath))
 
 /**
  * Ler JSON
@@ -25,11 +31,13 @@ app.use('/person', personRoutes)
 /**
  * Rota inicial
 */
-app.get('/', async(req, res) => {
+app.get('', async(req, res) => {
 
     try{
 
-        res.json([{"Olá":"Bem Vindo a API Agenda. Utilize a rota /person para recuperar os contatos, para alterar e excluir utilize /person/id  , a API envia e recebe Json =)."}])
+        res.render('index')
+
+        //res.json([{"Olá":"Bem Vindo a API Agenda. Utilize a rota /person para recuperar os contatos, para alterar e excluir utilize /person/id  , a API envia e recebe Json =)."}])
 
     }catch(error){
         res.status(500).json({ error: error })
