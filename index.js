@@ -1,8 +1,14 @@
+const path = require('path')
 const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
 const Person = require('./models/Person')
 require('dotenv').config()
+
+const viewsPath = path.join(__dirname, './public')
+
+app.set('views', viewsPath)
+app.use(express.static(viewsPath))
 
 /**
  * Ler JSON
@@ -25,11 +31,11 @@ app.use('/person', personRoutes)
 /**
  * Rota inicial
 */
-app.get('/', async(req, res) => {
+app.get('', async(req, res) => {
 
     try{
 
-        res.json([{"Olá":"Bem Vindo a API Agenda. Utilize a rota /person para recuperar os contatos, para alterar e excluir utilize /person/id  , a API envia e recebe Json =)."}])
+        res.status(200).json({ message: "Welcome, this is API implements CRUD, record a object Json with properts 'name'(string), 'lastName'(string), 'cpf'(number), 'dateOfBirth'(data), 'email'(string) and 'phones'(array)", endpoint: "Use the /person endpoint with the 'get' verb to get all records or use the 'post' verb to register one new record, to obtain, update or delete a record use the id of the record in the /person/id endpoint.'"})
 
     }catch(error){
         res.status(500).json({ error: error })
