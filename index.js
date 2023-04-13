@@ -31,13 +31,10 @@ app.use('/person', personRoutes)
  * Rota inicial
 */
 app.get('', async(req, res) => {
-
     try{
-
         res.render('index')
-
     }catch(error){
-        res.status(500).json({ error: error })
+        res.status(500).json({error: error})
     }
 })
 
