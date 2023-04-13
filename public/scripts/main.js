@@ -1,22 +1,24 @@
-const mainList = document.getElementById("contatos")
+const mainList = document.getElementById("contatos");
 const icon = document.createElement("i");
-icon.setAttribute("class", "ti-user");
 const circle = document.createElement("div")
-circle.setAttribute("class", "avatar");
 const item = document.createElement("li");
-circle.innerHTML = icon;
-item.innerHTML = circle;
+
+circle.setAttribute("class", "avatar");
+icon.setAttribute("class", "ti-user");
+circle.appendChild(icon);
+item.appendChild(circle);
 
 //<li><div class="avatar"><i class="ti-user"></i></div>3 Cri</li>
 
 
-async function insertDataList (){
+function insertDataList (){
 
-    const contactData = fetch(`/person`)
-    .then(response => response.json())
-    .then(data => data.forEach(contact => {
-        console.log(contact.name)
-    }))
+    const data = fetch(`/person`)
+        .then(response => response.json())
+        .then(data => data.forEach(contact => {
+            item.append(contact.name);
+            mainList.append(item);
+        }))
+        .finally()
 }
-
 insertDataList();
