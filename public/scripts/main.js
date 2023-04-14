@@ -1,24 +1,31 @@
 const mainList = document.getElementById("contatos");
-const icon = document.createElement("i");
-const circle = document.createElement("div")
-const item = document.createElement("li");
-
-circle.setAttribute("class", "avatar");
-icon.setAttribute("class", "ti-user");
-circle.appendChild(icon);
-item.appendChild(circle);
-
-//<li><div class="avatar"><i class="ti-user"></i></div>3 Cri</li>
+const countContact = document.getElementById("count");
 
 
-function insertDataList (){
 
-    const data = fetch(`/person`)
+var contacts = [];
+
+//<li><div class="ti-user"></div>Text</li>
+
+function insertDataList ()
+{
+
+    const insertDataList = fetch(`/person`)
         .then(response => response.json())
-        .then(data => data.forEach(contact => {
-            item.append(contact.name);
-            mainList.append(item);
-        }))
-        .finally()
+        .then(data => {data.forEach(element => {
+            contacts.push(`${element.name} ${element.lastName}`);
+        })
+        countContact.innerHTML = contacts.length;
+
+            for(let i = 0; i < contacts.length; i++)
+            {
+                var item = document.createElement("li");
+                item.append(contacts[i]);
+                var circle = document.createElement("div");
+                circle.setAttribute("class", "ti-user");
+                item.insertAdjacentElement("afterbegin", circle);
+                mainList.appendChild(item);
+            }
+        })
 }
 insertDataList();

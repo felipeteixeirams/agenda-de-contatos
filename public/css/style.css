@@ -89,6 +89,8 @@ h6 {
 	background-color: dimgray;
 }
 
+
+
 /** 
 * Navigation and Header
 */
@@ -132,16 +134,16 @@ header {
 	border-bottom: 1px solid rgba(0,0,0,.12);
 }
 
-header :not(:first-child) {
+header#title-list :not(:first-child) {
 	min-width: 8%;
 	text-align: right;
 }
 
-header :first-child {
+header#title-list :first-child {
 	min-width: 65%;
 }
 
-header :last-child {
+header#title-list :last-child {
 	margin-left: 9px;
 	margin-top: -13px;
 	transform: rotate(90deg);
@@ -153,11 +155,18 @@ header :last-child {
 * Main Content
 */
 
-main h6 {
+#contact-list main h6 {
 	padding: 10px 0 10px;
+	font-size: 0.75rem;
+	font-weight: 500;
 }
 
-ul#contatos li {
+#contact-list ul#contatos {
+	overflow:auto;
+	height:75vh;
+}
+
+#contatos li {
 	margin: .3rem 0;
 
 	margin: 20px 0;
@@ -166,23 +175,15 @@ ul#contatos li {
 	align-items: center;
 }
 
-main h6 {
-	font-size: 0.75rem;
-	font-weight: 500;
-}
-
-.avatar {
+#contatos div {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-width: 36px;
 	min-height: 36px;
+	margin-right: 25px;
 
     border-radius: 50%;
     background-color: royalblue;
 	color: white;
-}
-
-div.avatar {
-	margin-right: 25px;
 }
