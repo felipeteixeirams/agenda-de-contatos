@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./fonts/themify/themify-icons.css">
 
     <title>Novo Contato</title>
+
+    <script src="./scripts/register.js"></script>
 </head>
 <body>
 
@@ -22,40 +24,47 @@
             <i class="ti-settings"></i>
         </nav>
 
-        <header>
-            <i class="ti-close"></i>
+        <header class="header-title">
+            <a href="index.html"><i class="ti-close"></i></a>
             <h6>Novo Cadastro</h6>
-            
+            <button onclick="newPerson()">Salvar</button>
         </header>
 
 
-        <form id="form-register">
-            <label for="name">Nome</label><br>
-            <input type="text" name="name" id="name" placeholder="Primeiro nome"><br>
+        <main>
 
-            <label for="lastName">Sobrenome</label><br>
-            <input type="text" name="lastName" id="lastName" placeholder="Sobrenome"><br>
+            <div class="image-contact ti-user">
+            </div>
 
-            <label for="cpf">CPF</label><br>
-            <input type="text" name="cpf" id="cpf" placeholder="Informe somente os números"><br>
+            <form id="form-register" >
+                <label for="name" id="lname">Nome</label><br>
+                <input type="text" name="name" id="name" placeholder="Primeiro nome"><br><br>
+    
+                <label for="lastName">Sobrenome</label><br>
+                <input type="text" name="lastName" id="lastName" placeholder="Sobrenome"><br><br>
+    
+                <label for="cpf">CPF</label><br>
+                <input type="text" name="cpf" id="cpf" placeholder="Informe somente os números"><br><br>
+    
+                <label for="dateOfBirth">Data de Nascimento</label><br>
+                <input type="date" name="dateOfBirth" id="dateOfBirth" placeholder="Data de Nascimento"><br><br>
+    
+                <label for="email">E-mail</label><br>
+                <input type="email" name="email" id="email" placeholder="E-mail"><br><br>
+    
+                <label for="phones">Telefones</label><br>
+                <input type="text" name="phones" id="phone1" placeholder="Telefone Celular"><br><br>
+                <input type="text" name="phones" id="phone2" placeholder="Telefone Residencial"><br><br>
+    
+                
+                
+                
+            </form>
+        </main>
 
-            <label for="dateOfBirth">Data de Nascimento</label><br>
-            <input type="text" name="dateOfBirth" id="dateOfBirth" placeholder="Data de Nascimento"><br>
-
-            <label for="email">E-mail</label><br>
-            <input type="email" name="email" id="email" placeholder="E-mail"><br>
-
-            <label for="phones">Telefones</label><br>
-            <input type="text" name="phones" id="phone1" placeholder="Telefone Celular"><br>
-            <input type="text" name="phones" id="phone2" placeholder="Telefone Residencial"><br>
-
-            
-            <button type="reset" onclick="enviar()">Enviar</button>
-            
-        </form>
+        <p id="message"></p>
 
     </div>
     
-    <script src="./scripts/register.js"></script>
 </body>
 </html>

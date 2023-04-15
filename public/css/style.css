@@ -4,6 +4,9 @@
     --grey-black: #202124;
 	--grey-medium: #5F6368;
 	--grey-ligth: #e9e9e9;
+	--blue-ligth: #c2e7ff;
+	--blue-medium: #5999ee;
+	--blue-ocean: #1771e7;
 }
 
 /**
@@ -149,6 +152,27 @@ header#title-list :last-child {
 	transform: rotate(90deg);
 }
 
+header a{
+	text-decoration: none;
+	color: var(--grey-medium);
+}
+
+header.header-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header.header-title button {
+	border: none;
+	border-radius: 5px;
+	background-color: var(--blue-ocean);
+	color: var(--grey-ligth);
+	padding: 8px 25px;
+	font-weight: 500;
+}
+
+
 
 
 /** 
@@ -186,4 +210,44 @@ header#title-list :last-child {
     border-radius: 50%;
     background-color: royalblue;
 	color: white;
+}
+
+
+.image-contact {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	margin-right: auto;
+	margin-left: auto;
+	height: 100px;
+	width: 100px;
+	
+	background-color: var(--blue-ligth);
+	font-weight: bolder;
+	font-size: 1.8rem;
+}
+
+#form-register input:focus::placeholder{
+	color: transparent;
+}
+
+#form-register input {
+	border: none;
+	border-bottom: 1px solid var(--grey-ligth);
+}
+
+#form-register input:focus {
+	border-bottom: 2px solid var(--blue-ocean);
+}
+
+#form-register input:focus::after {
+	border: none;
+	border-bottom: 2px solid var(--blue-ocean);
+}
+
+#form-register label {
+	font-size: .7rem;
+	font-weight: 500;
+	color: var(--blue-medium)
 }
