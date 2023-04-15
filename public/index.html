@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./fonts/themify/themify-icons.css">
+    
 </head>
 <body>
+
     <div class="container">
         <nav>
             <i class="ti-menu"></i>
@@ -20,7 +22,7 @@
             <i class="ti-settings"></i>
         </nav>
         
-        <header>
+        <header id="title-list">
             <h6>Título</h6>
             <i class="ti-printer"></i>
             <i class="ti-download"></i>
@@ -28,34 +30,27 @@
             <i class="ti-more-alt"></i>
         </header>
 
-        <main>
-            <h6>CONTATOS (2)</h6>
-            <ul id="contatos">
-                <li><div class="avatar"><i class="ti-user"></i></div>3 Cri</li>
-                <li><div class="avatar"><i class="ti-user"></i></div>Açai Marmita</li>
-                <li><div class="avatar"><i class="ti-user"></i></div>Adelino Conserto Eletronicos</li>
-                <li><div class="avatar"><i class="ti-user"></i></div>Adm Ciudad De Vigo</li>
-                <li><div class="avatar"><i class="ti-user"></i></div>Adriano Guedes</li>
-                <li><div class="avatar"><i class="ti-user"></i></div>AG Assistência Técnica</li>
-                <li><div class="avatar"><i class="ti-user"></i></div>Agenor Alginfo</li>
-                <li><div class="avatar"><i class="ti-user"></i></div>Alessandra Advogada cliente</li>
-                <li><div class="avatar"><i class="ti-user"></i></div>Aline Faganelli</li>
-            </ul>
+        <main id="contact-list">
+            <h6>CONTATOS (<i id="count"></i>)</h6>
+            <ul id="contatos"></ul>
         </main>
         
         <div id="btn-add">
-            <table>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
+            <a href="register.html">
+                <table>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </a>
         </div>
-    </div> 
+    </div>
 
+    <script src="./scripts/main.js"></script>
 </body>
 </html>

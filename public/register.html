@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./fonts/themify/themify-icons.css">
+
+    <title>Novo Contato</title>
+
+    <script src="./scripts/register.js"></script>
+</head>
+<body>
+
+
+    <div class="container">
+        <nav>
+            <i class="ti-menu"></i>
+            <h1>Contatos</h1>
+            <i class="ti-search"></i>
+            <i class="ti-help-alt"></i>
+            <i class="ti-settings"></i>
+        </nav>
+
+        <header class="header-title">
+            <a href="index.html"><i class="ti-close"></i></a>
+            <h6>Novo Cadastro</h6>
+            <button onclick="newPerson()">Salvar</button>
+        </header>
+
+
+        <main>
+
+            <div class="image-contact ti-user">
+            </div>
+
+            <form id="form-register" >
+                <label for="name" id="lname">Nome</label><br>
+                <input type="text" name="name" id="name" placeholder="Primeiro nome"><br><br>
+    
+                <label for="lastName">Sobrenome</label><br>
+                <input type="text" name="lastName" id="lastName" placeholder="Sobrenome"><br><br>
+    
+                <label for="cpf">CPF</label><br>
+                <input type="text" name="cpf" id="cpf" placeholder="Informe somente os números"><br><br>
+    
+                <label for="dateOfBirth">Data de Nascimento</label><br>
+                <input type="date" name="dateOfBirth" id="dateOfBirth" placeholder="Data de Nascimento"><br><br>
+    
+                <label for="email">E-mail</label><br>
+                <input type="email" name="email" id="email" placeholder="E-mail"><br><br>
+    
+                <label for="phones">Telefones</label><br>
+                <input type="text" name="phones" id="phone1" placeholder="Telefone Celular"><br><br>
+                <input type="text" name="phones" id="phone2" placeholder="Telefone Residencial"><br><br>
+    
+                
+                
+                
+            </form>
+        </main>
+
+        <p id="message"></p>
+
+    </div>
+    
+</body>
+</html>
