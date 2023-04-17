@@ -8,6 +8,7 @@ async function newPerson ()
     const inputEmail = document.getElementById('email');
     const inputPhone1 = document.getElementById('phone1');
     const inputPhone2 = document.getElementById('phone2');
+    const mensg = document.getElementById('message');
 
     
     const requestOptions = {
@@ -16,11 +17,14 @@ async function newPerson ()
         body: JSON.stringify({ name: `${inputName.value}`, lastName: `${inputLastName.value}`, cpf: `${inputCpf.value}`, dateOfBirth: `${inputDataOfBirth.value}`, email: `${inputEmail.value}`, phones: [`${inputPhone1.value}`, `${inputPhone2.value}`]})
     }
 
-    fetch('/person', requestOptions)
-    .then(async response => {
-        await response.json()
-    })
-    .then(data =>data)
-
+    try{
+        fetch('/person', requestOptions)
+        .then(async response => {
+            await response
+        })
+        .then(async data => await console.log(data))
+    }catch(error){
+        console.log(error)
+    }
 
 }

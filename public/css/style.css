@@ -3,7 +3,7 @@
 :root{
     --grey-black: #202124;
 	--grey-medium: #5F6368;
-	--grey-ligth: #e9e9e9;
+	--grey-ligth: #dadce0;
 	--blue-ligth: #c2e7ff;
 	--blue-medium: #5999ee;
 	--blue-ocean: #1771e7;
@@ -157,10 +157,14 @@ header a{
 	color: var(--grey-medium);
 }
 
-header.header-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+header.header-title i {
+	margin-right: 15px;
+}
+
+header.header-title :nth-child(2) {
+	font-weight: 500;
+	min-width: 70%;
 }
 
 header.header-title button {
@@ -220,6 +224,7 @@ header.header-title button {
 	border-radius: 50%;
 	margin-right: auto;
 	margin-left: auto;
+	margin-bottom: 30px;
 	height: 100px;
 	width: 100px;
 	
@@ -230,6 +235,16 @@ header.header-title button {
 
 #form-register input:focus::placeholder{
 	color: transparent;
+	transition: .2s;
+}
+
+#form-register input::placeholder,
+#form-register input[type="date"]::placeholder{
+	color: rgba(0,0,0,.38)
+}
+
+#form-register input[type="date"]::before {
+	color: #ea4335;
 }
 
 #form-register input {
@@ -238,16 +253,61 @@ header.header-title button {
 }
 
 #form-register input:focus {
-	border-bottom: 2px solid var(--blue-ocean);
+	box-shadow: 0 0 0 0;
+	outline: 0;
 }
 
-#form-register input:focus::after {
-	border: none;
+#form-register input:focus {
 	border-bottom: 2px solid var(--blue-ocean);
+	transition: .2s;
+}
+
+#form-register div {
+	margin-bottom: 20px;
+}
+
+#form-register div:nth-of-type(even){
+	min-width: 80%;
+}
+
+
+#form-register div:nth-of-type(odd){
+	min-width: 15%;
+}
+
+#form-register div:nth-of-type(odd) span{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #form-register label {
+	padding-top: 5px;
+}
+
+#form-register label {
+	display: block;
 	font-size: .7rem;
 	font-weight: 500;
 	color: var(--blue-medium)
+}
+
+#form-register i.ti-close {
+	font-size: .7rem;
+	font-weight: bold;
+	text-shadow: 1px 0px 0px var(--grey-ligth);
+	margin: 0 20px;
+}
+
+#form-register i,
+#form-register span {
+	color: var(--grey-medium);
+}
+
+#form-register div {
+	display: inline-block;
+}
+
+span.ti-user {
+	padding-bottom: 50%;
 }
