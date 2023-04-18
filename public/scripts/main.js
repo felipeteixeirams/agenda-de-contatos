@@ -13,7 +13,7 @@ function insertDataList ()
     const insertDataList = fetch(`/person`)
         .then(response => response.json())
         .then(data => {data.forEach(element => {
-            contacts.push(`${element.name} ${element.lastName}`);
+            contacts.push(`${element.name} ${element.lastName} +${element.phones[0]} \\ +${element.phones[1]}`);
         })
         countContact.innerHTML = contacts.length;
 
