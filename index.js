@@ -42,12 +42,8 @@ app.get('', async(req, res) => {
  * Entregar uma porta
  */
 
-mongoose
-    .connect(`mongodb+srv://${process.env.BD_USER}:${process.env.BD_PASSWORD}@clusterapi.uwe76.mongodb.net/?retryWrites=true&w=majority`
-    )
-    .then(
-        app.listen(process.env.BD_PORT, process.env.BD_HOST, ()=> {
+mongoose.connect(`mongodb+srv://${process.env.BD_USER}:${process.env.BD_PASSWORD}@clusterapi.uwe76.mongodb.net/?retryWrites=true&w=majority`)
+    .then(app.listen(process.env.BD_PORT, process.env.BD_HOST, () => {
             console.log(`Connected: http://${process.env.BD_HOST}:${process.env.BD_PORT}`)
         })
-    )
-    .catch((error)=> console.log(error))
+    ).catch((error)=> console.log(error))

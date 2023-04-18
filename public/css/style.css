@@ -4,6 +4,7 @@
     --grey-black: #202124;
 	--grey-medium: #5F6368;
 	--grey-ligth: #dadce0;
+	--light-grey: #f2f2f2;
 	--blue-ligth: #c2e7ff;
 	--blue-medium: #5999ee;
 	--blue-ocean: #1771e7;
@@ -51,7 +52,13 @@ h6 {
 
 
 .container {
+	position: relative;
     padding: 18px;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 360px;
+	max-width: 600px;
+	height: 100%;
 }
 
 
@@ -62,9 +69,9 @@ h6 {
 
 #btn-add {
 	display:inline;
-	position: fixed;
+	position: absolute;
 	bottom: 23px;
-	right: 23px;
+	right: 40px;
 	padding: 16px;
 
 	background-color: white;
@@ -167,13 +174,19 @@ header.header-title :nth-child(2) {
 	min-width: 70%;
 }
 
-header.header-title button {
+.btn-save {
 	border: none;
 	border-radius: 5px;
 	background-color: var(--blue-ocean);
 	color: var(--grey-ligth);
 	padding: 8px 25px;
 	font-weight: 500;
+}
+
+.btn-save:active {
+	background-color: var(--grey-black);
+	font-weight: 500;
+	transition: .2s;
 }
 
 
@@ -194,13 +207,24 @@ header.header-title button {
 	height:75vh;
 }
 
-#contatos li {
-	margin: .3rem 0;
+#contatos li:first-child{
+	margin-top: 15px;
+}
 
-	margin: 20px 0;
+#contatos li {
+
+	margin: .3rem 0;
+	padding: 8px 15px;
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;
+	cursor: pointer;
+}
+
+#contatos li:hover,
+#contatos li:active {
+	background-color: var(--light-grey);
+	transition: .5s;
 }
 
 #contatos div {
@@ -248,6 +272,8 @@ header.header-title button {
 }
 
 #form-register input {
+	min-width: 60%;
+	min-width: 70%;
 	border: none;
 	border-bottom: 1px solid var(--grey-ligth);
 }
