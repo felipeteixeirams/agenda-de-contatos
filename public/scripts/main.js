@@ -1,11 +1,10 @@
-const mainList = document.getElementById("contatos");
-const countContact = document.getElementById("count");
+const mainList = document.getElementById("contatos"); //Elemento UL
+const countContact = document.getElementById("count"); //Informação de Qtd de registros
+var bodyMain = document.getElementById("main"); //Body da pagina principal
 
+//Array de contatos
+const contacts = [];
 
-
-var contacts = [];
-
-//<li><div class="ti-user"></div>Text</li>
 
 function insertDataList ()
 {
@@ -13,7 +12,7 @@ function insertDataList ()
     const insertDataList = fetch(`/person`)
         .then(response => response.json())
         .then(data => {data.forEach(element => {
-            contacts.push(`${element.name} ${element.lastName} +${element.phones[0]} \\ +${element.phones[1]}`);
+            contacts.push(`${element.name} ${element.lastName}`);
         })
         countContact.innerHTML = contacts.length;
 
@@ -24,8 +23,14 @@ function insertDataList ()
                 var circle = document.createElement("div");
                 circle.setAttribute("class", "ti-user");
                 item.insertAdjacentElement("afterbegin", circle);
-                mainList.appendChild(item);
+                var linkToDetails = document.createElement("a");
+                linkToDetails.setAttribute("href", "./details.html");
+                linkToDetails.appendChild(item);
+                mainList.appendChild(linkToDetails);
             }
         })
+        
 }
-insertDataList();
+
+bodyMain = addEventListener('load', insertDataList());
+//mainList.firstChild = addEventListener('click', '/details.html');
