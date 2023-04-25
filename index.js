@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const app = express()
 require('dotenv').config()
 
-const viewsPath = path.join(__dirname, './public')
+const viewsPath = path.join(__dirname, './')
 
 app.set('views', viewsPath)
 app.use(express.static(viewsPath))

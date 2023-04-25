@@ -4,7 +4,7 @@
     --grey-black: #202124;
 	--grey-medium: #5F6368;
 	--grey-ligth: #dadce0;
-	--light-grey: #f2f2f2;
+	--light-grey: #f1f1f1;
 	--blue-ligth: #c2e7ff;
 	--blue-medium: #5999ee;
 	--blue-ocean: #1771e7;
@@ -15,10 +15,18 @@
 */
 
 body {
+	width: 100vw;
+	height: 100vh;
     font-family: Roboto, Arial, sans-serif;
     font-size: .875rem;
     font-weight: 400;
+
     color: var(--grey-black);
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -56,9 +64,10 @@ h6 {
     padding: 18px;
 	margin-left: auto;
 	margin-right: auto;
-	min-width: 360px;
+	min-width: 300px;
 	max-width: 600px;
-	height: 100%;
+	max-height: 95vh;
+	height: 95%;
 }
 
 
@@ -68,7 +77,6 @@ h6 {
 */
 
 #btn-add {
-	display:inline;
 	position: absolute;
 	bottom: 23px;
 	right: 40px;
@@ -100,7 +108,6 @@ h6 {
 }
 
 
-
 /** 
 * Navigation and Header
 */
@@ -118,10 +125,10 @@ header {
 
 nav i {
 	min-width: 10%;
-
-	color: var(--grey-medium);
-	font-size: 1.1rem;
+	
 	text-align: center;
+	font-size: 1.1rem;
+	color: var(--grey-medium);
 }
 nav :first-child {
 	font-size: 1.2rem;
@@ -186,10 +193,8 @@ header.header-title :nth-child(2) {
 .btn-save:active {
 	background-color: var(--grey-black);
 	font-weight: 500;
-	transition: .2s;
+	transition: .1s;
 }
-
-
 
 
 /** 
@@ -204,7 +209,6 @@ header.header-title :nth-child(2) {
 
 #contact-list ul#contatos {
 	overflow:auto;
-	height:75vh;
 }
 
 #contatos li:first-child{
@@ -212,19 +216,25 @@ header.header-title :nth-child(2) {
 }
 
 #contatos li {
-
 	margin: .3rem 0;
 	padding: 8px 15px;
 	display: flex;
-	flex-wrap: nowrap;
+	border-radius: 3px;
+	align-content: space-between;
+
 	align-items: center;
 	cursor: pointer;
+	flex-wrap: nowrap;
+	color: var(--grey-black);
 }
 
-#contatos li:hover,
-#contatos li:active {
+#contatos li:hover {
 	background-color: var(--light-grey);
 	transition: .5s;
+}
+
+#contatos li:active {
+	background-color: var(--grey-black);
 }
 
 #contatos div {
